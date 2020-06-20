@@ -25,12 +25,53 @@ $resultado = $_SESSION["resultado"];
               <legend class="text-center header"> Agregar producto <br /> Usuario: <?php echo $usr; ?> </legend>
               <div class="form-group">
                 <div class="col-md-8">
-                  <input class="form-control" type="text" required="required" name="namae" placeholder="Nombre">
+                  <input class="form-control" type="text" required="required" name="id_prod" placeholder="Id">
                 </div>
               </div>
               <div class="form-group">
                 <div class="col-md-8">
-                  <input class="form-control" type="text" required="required" name="clase" placeholder="Clase">
+                  <input class="form-control" type="text" required="required" name="namae" placeholder="Nombre">
+                </div>
+              </div>
+              <label>Insertar cada auto separado por una coma y un espacio</label>
+              <div class="form-group">
+                <div class="col-md-8">
+                  <input class="form-control" type="text" required="required" name="comp" placeholder="Autos compatibles">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-md-8">
+                  <input class="form-control" type="text" required="required" name="prec" placeholder="Precio">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-md-8">
+                  <input class="form-control" type="text" required="required" name="exis" placeholder="Existencias">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-md-8">
+                  <input class="form-control" type="text" required="required" name="PreOfer" placeholder="Precio de oferta">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-md-8">
+                  <input class="form-control" type="text" required="required" name="oferta" placeholder="Oferta activa">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-md-8">
+                  <input class="form-control" type="text" required="required" name="garan" placeholder="Garantia">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-md-8">
+                  <input class="form-control" type="text" required="required" name="cat" placeholder="Categoria">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-md-8">
+                  <input class="form-control" type="text" required="required" name="prov" placeholder="Proveedor">
                 </div>
               </div>
               <div class="form-group">
@@ -48,6 +89,7 @@ $resultado = $_SESSION["resultado"];
                     <?php
                     if ($_SESSION["insercion"]) {
                       echo "Producto insertado correctamente <br />";
+                      echo $resultado;
                       $_SESSION["insercion"] = false;
                     }
                     ?>
