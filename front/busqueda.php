@@ -24,7 +24,7 @@ $usr = $_SESSION["usuario"];
               <legend class="text-center header"> Bienvenido <?php echo $usr; ?> </legend>
               <div class="form-group">
                 <div class="col-md-8">
-                  <label class="col-md-8">Busqueda por nombre</label>
+                  <label class="col-md-8">Busqueda de producto</label>
                 </div>
               </div>
               <div class="form-group">
