@@ -26,9 +26,6 @@ switch ($_POST['tipo']) {
     break;
 }
 
-echo "we ".$target."<br />";
-echo "we ".$param."<br />";
-
 $cliente = new MongoDB\Client("mongodb://${user}:${pwd}@localhost:27017");
 $colección = $cliente->Examen->Empleado;
 $aux = $cliente->Examen->Domicilio;
@@ -47,7 +44,7 @@ foreach ($busqueda as $entry) {
   $temp[$EMPLEADO_Materno] = $entry[$EMPLEADO_Materno];
   $temp[$EMPLEADO_Tel] = $entry[$EMPLEADO_Tel];
   $temp[$EMPLEADO_Domicilio] = $entry[$EMPLEADO_Domicilio];
-  
+  //*
   $VIP = $entry[$EMPLEADO_Domicilio];
   foreach ($busquedaAUX as $test1) {
     if ($test1[$DOMICILIO_ID] == $VIP) {
@@ -56,7 +53,7 @@ foreach ($busqueda as $entry) {
       $temp[$DOMICILIO_Colonia] = $test1[$DOMICILIO_Colonia];
       $temp[$DOMICILIO_CP] = $test1[$DOMICILIO_CP];
     }
-  }
+  }// */
 
   $temp[$EMPLEADO_Correo] = $entry[$EMPLEADO_Correo];
   $temp[$EMPLEADO_Puesto] = $entry[$EMPLEADO_Puesto];
