@@ -25,7 +25,14 @@ $resultado = $_SESSION["resultado"];
               <legend class="text-center header"> Busqueda de producto <br /> Usuario: <?php echo $usr; ?> </legend>
               <div class="form-group">
                 <div class="col-md-8">
-                  <input class="form-control" type="text" required="required" name="namae" placeholder="Nombre">
+                  <input class="form-control" type="text" required="required" name="namae" placeholder="Busqueda">
+                </div>
+                <div class="col-md-8">
+                  <label>Parametro de busqueda</label>
+                  <select name="tipo">
+                    <option value="name" selected>Nombre</option>
+                    <option value="brewery">Clase</option>
+                  </select>
                 </div>
               </div>
               <div class="form-group">

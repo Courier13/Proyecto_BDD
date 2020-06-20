@@ -4,11 +4,12 @@ session_start();
 require '../pass.php';
 
 $target = $_POST['namae'];
+$param = $_POST['tipo'];
 
 $cliente = new MongoDB\Client("mongodb://${user}:${pwd}@localhost:27017");
 $colección = $cliente->demo->beers;
 
-$query = ["name" => $target];
+$query = [$param => $target];
 $busqueda = $colección->find( $query );
 
 $resultado = array();
