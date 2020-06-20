@@ -38,11 +38,11 @@ $usr = $_SESSION["usuario"];
               </div>
             </fieldset>
           </form>
-          <form class="form-horizontal" method="post" action="">
+          <form class="form-horizontal" method="post" action="./query/lookEmpleado.php">
             <fieldset>
               <div class="form-group">
                 <div class="col-md-8">
-                  <label class="col-md-8">Busqueda por vehiculo</label>
+                  <label class="col-md-8">Busqueda de empleado</label>
                 </div>
               </div>
               <div class="form-group">
