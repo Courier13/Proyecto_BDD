@@ -5,6 +5,7 @@ if ($_SESSION["login"] == false ) {
 }
 $usr = $_SESSION["usuario"];
 $resultado = $_SESSION["resultado"];
+require '../../globales.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -30,8 +31,10 @@ $resultado = $_SESSION["resultado"];
                 <div class="col-md-8">
                   <label>Parametro de busqueda</label>
                   <select name="tipo">
-                    <option value="name" selected>Nombre</option>
-                    <option value="brewery">Clase</option>
+                    <option value="nombre" selected>Nombre</option>
+                    <option value="compatibles">Compatibles</option>
+                    <option value="cat">Categoria</option>
+                    <option value="prov">Proveedor</option>
                   </select>
                 </div>
               </div>
@@ -51,11 +54,30 @@ $resultado = $_SESSION["resultado"];
                     if ($_SESSION["busqueda"]) {
                       echo "Busqueda: <br />";
                       foreach ($resultado as $entry) {
-                        $_id = $entry['_id'];
-                        $nombre = $entry['name'];
-                        $test = $entry['brewery'];
+                        $_id = $entry[$PRODUCTO_ID];
+                      	$nombre = $entry[$PRODUCTO_Nombre];
+                        $compat = $entry[$PRODUCTO_Compatibles];
+                        $precio = $entry[$PRODUCTO_Precio];
+                        $exis = $entry[$PRODUCTO_Existencia];
+                        $preOfer = $entry[$PRODUCTO_Precio_Oferta];
+                        $oferta = $entry[$PRODUCTO_Oferta];
+                        $garant = $entry[$PRODUCTO_Garantia];
+                        $cat = $entry[$PRODUCTO_Categoria];
+                        $pro = $entry[$PRODUCTO_Proveedor];
 
-                        echo "Id: " . $_id . "<br />" . " Nombre: " . $nombre . "<br />" . " Clase: " . $test .  "<br />" . "<br />";
+                        echo "Id: " . $_id . "<br />" .
+                        " Nombre: " . $nombre . "<br />" .
+                        " Coches compatibles: " ;
+                        echo json_encode($compat);
+                        echo "<br />" .
+                        " Nombre: " . $precio . "<br />" .
+                        " Nombre: " . $exis . "<br />" .
+                        " Nombre: " . $preOfer . "<br />" .
+                        " Nombre: " . $oferta . "<br />" .
+                        " Nombre: " . $garant . "<br />" .
+                        " Nombre: " . $cat . "<br />" .
+                        " Nombre: " . $pro . "<br />" .
+                        "<br />";
                       }
                       $_SESSION["busqueda"] = false;
                     }
