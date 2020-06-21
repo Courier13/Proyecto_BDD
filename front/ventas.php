@@ -1,11 +1,12 @@
 <?php
 session_start();
 if ($_SESSION["login"] == false ) {
-  header("Location: ../../login.php");
+  header("Location: ../login.php");
 }
 $usr = $_SESSION["usuario"];
 $resultado = $_SESSION["resultado"];
-require '../../globales.php';
+$carro = $_SESSION["carro"];
+require '../globales.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -21,9 +22,9 @@ require '../../globales.php';
     <div class="row">
       <div class="col-md-12">
         <div class="well well-sm">
-          <form class="form-horizontal" method="post" action="../../back/buscarNombre.php">
+          <form class="form-horizontal" method="post" action="../back/buscarProdVenta.php">
             <fieldset>
-              <legend class="text-center header"> Busqueda de producto <br /> Usuario: <?php echo $usr; ?> </legend>
+              <legend class="text-center header"> Ventas <br /> Usuario: <?php echo $usr; ?> </legend>
               <div class="form-group">
                 <div class="col-md-8">
                   <input class="form-control" type="text" required="required" name="namae" placeholder="Busqueda">
@@ -87,7 +88,81 @@ require '../../globales.php';
               </div>
             </fieldset>
           </form>
-          <form class="form-horizontal" method="post" action="../busqueda.php">
+          <form class="form-horizontal" method="post" action="../back/agregarCarro.php">
+            <fieldset>
+              <div class="form-group">
+                <div class="col-md-8">
+                  <input class="form-control" type="text" required="required" name="id_prod" placeholder="ID del Producto">
+                </div>
+                <div class="col-md-8"><div class="col-md-8">
+                  <input class="form-control" type="text" required="required" name="cant_prod" placeholder="Cantidad del Producto">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-md-8">
+                  <p>
+                    <button type="submit" name="submit" style="margin-left: 350px; border-radius: 10px; padding-left: 20px; padding-right: 20px;color: white; background-color: green">
+                      Agregar al carrito
+                    </button>
+                  </p>
+                </div>
+              </div>
+
+                <div class="col-md-8">
+                  <label class="col-md-8">
+                    <?php
+                    if ($_SESSION["CarritoFlag"]) {
+                      echo "Carrito: <br /> <br />";
+                      foreach ($carro as $entry) {
+                        $_id = $entry[$PRODUCTO_ID];
+                      	$nombre = $entry[$PRODUCTO_Nombre];
+                        $precio = $entry[$PRODUCTO_Precio];
+                        $cant = $entry[$PRODUCTO_VENTA_Cantidad];
+                        $preOfer = $entry[$PRODUCTO_Precio_Oferta];
+                        $oferta = $entry[$PRODUCTO_Oferta];
+
+                        echo "Id articulo: " . $_id . "<br />" .
+                        " Nombre: " . $nombre . "<br />" .
+                        " Precio: " . $precio . "<br />" .
+                        " Cantidad: " . $cant . "<br />" .
+                        " Precio de oferta: " . $preOfer . "<br />" .
+                        " Esta en oferta: " . $oferta . "<br />" .
+                        "<br />";
+                      }
+                      $_SESSION["busqueda"] = false;
+                    }
+                    ?>
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </form>
+          <form class="form-horizontal" method="post" action="../back/venderProd.php">
+            <fieldset>
+              <div class="form-group">
+                <div class="col-md-8">
+                  <input class="form-control" type="text" required="required" name="id_client" placeholder="Id del cliente">
+                </div>
+                <div class="col-md-8">
+                  <label>Requiere factura</label>
+                  <select name="facturacion">
+                    <option value="sin" selected>No</option>
+                    <option value="con">Si</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-md-8">
+                  <p>
+                    <button type="submit" name="submit" style="margin-left: 350px; border-radius: 10px; padding-left: 20px; padding-right: 20px;color: white; background-color: green">
+                      Concretar venta
+                    </button>
+                  </p>
+                </div>
+              </div>
+            </fieldset>
+          </form>
+          <form class="form-horizontal" method="post" action="bienvenido.php">
             <fieldset>
               <div class="form-group">
                 <div class="col-md-8">
