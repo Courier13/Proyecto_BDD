@@ -70,13 +70,13 @@ require '../../globales.php';
                         " Coches compatibles: " ;
                         echo json_encode($compat);
                         echo "<br />" .
-                        " Nombre: " . $precio . "<br />" .
-                        " Nombre: " . $exis . "<br />" .
-                        " Nombre: " . $preOfer . "<br />" .
-                        " Nombre: " . $oferta . "<br />" .
-                        " Nombre: " . $garant . "<br />" .
-                        " Nombre: " . $cat . "<br />" .
-                        " Nombre: " . $pro . "<br />" .
+                        " Precio: " . $precio . "<br />" .
+                        " Existencias: " . $exis . "<br />" .
+                        " Precio de oferta: " . $preOfer . "<br />" .
+                        " Esta en oferta: " . $oferta . "<br />" .
+                        " Tiempo de garantia: " . $garant . "<br />" .
+                        " Categoria: " . $cat . "<br />" .
+                        " Proveedor: " . $pro . "<br />" .
                         "<br />";
                       }
                       $_SESSION["busqueda"] = false;
