@@ -30,7 +30,7 @@ $resultado = $_SESSION["resultado"];
               </div>
               <div class="form-group">
                 <div class="col-md-8">
-                  <input class="form-control" type="text" required="required" name="namae" placeholder="Nombre">
+                  <input class="form-control" type="text" required="required" name="id_prod" placeholder="ID">
                 </div>
               </div>
               <div class="form-group">
@@ -40,7 +40,18 @@ $resultado = $_SESSION["resultado"];
               </div>
               <div class="form-group">
                 <div class="col-md-8">
-                  <input class="form-control" type="text" required="required" name="clase" placeholder="Clase">
+                  <input class="form-control" type="text" required="required" name="change" placeholder="Cambio">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-md-8">
+                  <select name="clase">
+                    <option value="nombre" selected>Precio</option>
+                    <option value="exis">Existencias</option>
+                    <option value="preOfer">Precio Oferta</option>
+                    <option value="Ofer">Oferta</option>
+                    <option value="Garan">Garantia</option>
+                  </select>
                 </div>
               </div>
               <div class="form-group">
@@ -58,6 +69,8 @@ $resultado = $_SESSION["resultado"];
                     <?php
                     if ($_SESSION["insercion"]) {
                       echo "Producto atualizado correctamente <br />";
+                      echo "Match: " . $_SESSION["match"] . "<br />";
+                      echo "Mod: " . $_SESSION["mod"] . "<br />";
                       $_SESSION["insercion"] = false;
                     }
                     ?>
