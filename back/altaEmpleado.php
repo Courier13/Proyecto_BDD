@@ -4,7 +4,7 @@ session_start();
 require '../pass.php';
 require '../globales.php';
 
-$id_empl = $_POST['id_empl'];
+$id_empl = intval($_POST['id_empl']);
 $Namae = $_POST['namae'];
 $ape_pat = $_POST['ape_pat'];
 $ape_mat = $_POST['ape_mat'];
