@@ -4,6 +4,8 @@ if ($_SESSION["login"] == false ) {
   header("Location: ../login.php");
 }
 $usr = $_SESSION["usuario"];
+$_SESSION["CarritoFlag"] = false;
+$_SESSION["carro"] = array();
 ?>
 <!DOCTYPE html>
 <html>
