@@ -44,7 +44,7 @@ foreach ($busqueda as $entry) {
   $temp[$EMPLEADO_Materno] = $entry[$EMPLEADO_Materno];
   $temp[$EMPLEADO_Tel] = $entry[$EMPLEADO_Tel];
   $temp[$EMPLEADO_Domicilio] = $entry[$EMPLEADO_Domicilio];
-  //*
+  /*
   $VIP = $entry[$EMPLEADO_Domicilio];
   foreach ($busquedaAUX as $test1) {
     if ($test1[$DOMICILIO_ID] == $VIP) {
