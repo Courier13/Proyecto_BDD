@@ -56,6 +56,24 @@ $usr = $_SESSION["usuario"];
               </div>
             </fieldset>
           </form>
+          <form class="form-horizontal" method="post" action="./query/insertEmpl.php">
+            <fieldset>
+              <div class="form-group">
+                <div class="col-md-8">
+                  <label class="col-md-8">Agregar empleado</label>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-md-8">
+                  <p>
+                    <button type="submit" name="submit" style="margin-left: 350px; border-radius: 10px; padding-left: 20px; padding-right: 20px;color: white; background-color: green">
+                      Ir
+                    </button>
+                  </p>
+                </div>
+              </div>
+            </fieldset>
+          </form>
           <form class="form-horizontal" method="post" action="bienvenido.php">
             <fieldset>
               <div class="form-group">
