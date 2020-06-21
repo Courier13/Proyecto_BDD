@@ -6,20 +6,30 @@ $_SESSION["login"] = false;
 <html>
 <head>
   <title>Examen BDD</title>
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/login.css">
   <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 </head>
 
-<body>
+<body style="background: linear-gradient(#e66465, #9198e5);">
+
   <div class="container">
+ 
     <div class="row">
+    
       <div class="col-md-12">
+      <div class="brand_logo_container">
+            <img src="./front/img/personal.png" class="brand_logo" alt="Logo">
+					</div>
         <div class="well well-sm">
+       
           <form class="form-horizontal" method="post" action="./back/check.php">
-            <fieldset>
-              <legend class="text-center header"> Login </legend>
-              <div class="form-group">
+          
+            <fieldset class="">
+            
+              <h1 class="text-center "> Login </h1>
+              <div class="form-group text-center">
                 <div class="col-md-8">
                   <input class="form-control" type="text" required="required" name="user" placeholder="Nombre">
                 </div>
@@ -35,7 +45,7 @@ $_SESSION["login"] = false;
               } ?>
               <div class="form-group">
                 <div class="col-md-8">
-                  <p><button type="submit" name="submit" style="margin-left: 350px; border-radius: 10px; padding-left: 20px; padding-right: 20px;color: white; background-color: green">Enviar</button></p>
+                  <p><button type="submit" name="submit" class="btn btn-primary btn-lg btn-block">Enviar</button></p>
                 </div>
               </div>
             </fieldset>

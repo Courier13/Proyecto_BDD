@@ -52,7 +52,7 @@ $resultado = $_SESSION["resultado"];
                   <label class="col-md-8">
                     <?php
                     if ($_SESSION["insercion"]) {
-                      echo "Empleado Agregado correctamente <br />";
+                      echo "Factura Agregada Correctamente <br />";
                       echo $resultado;
                       $_SESSION["insercion"] = false;
                     }
