@@ -33,9 +33,6 @@ switch ($_POST['clase']) {
 $cliente = new MongoDB\Client("mongodb://${user}:${pwd}@localhost:27017");
 $colección = $cliente->Examen->Producto;
 
-$query = [$PRODUCTO_ID => $target_id];
-$update = ['$set' => [$target_Class => $target_Change]];
-
 $query = [$PRODUCTO_ID => intval($target_id)];
 $update = ['$set' => [$target_Class => $target_Change]];
 
