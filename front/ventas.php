@@ -4,7 +4,7 @@ if ($_SESSION["login"] == false ) {
   header("Location: ../login.php");
 }
 $usr = $_SESSION["usuario"];
-$resultado = $_SESSION["resultado"];
+// $resultado = $_SESSION["resultado"];
 $carro = $_SESSION["carro"];
 require '../globales.php';
 ?>
@@ -12,13 +12,14 @@ require '../globales.php';
 <html>
 <head>
   <title>Examen BDD</title>
-  <link rel="stylesheet" href="../../css/style.css">
-  <link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/ventas.css">
+  <!-- <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css"> -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
 
-<body>
-  <div class="container">
+<body style=" background: rgb(2,0,36);
+background: linear-gradient(356deg, rgba(2,0,36,1) 14%, rgba(9,24,121,1) 35%, rgba(0,212,255,1) 100%); ">
+  <div class="contenedor">
     <div class="row">
       <div class="col-md-12">
         <div class="well well-sm">
@@ -27,7 +28,7 @@ require '../globales.php';
               <legend class="text-center header"> Ventas <br /> Usuario: <?php echo $usr; ?> </legend>
               <div class="form-group">
                 <div class="col-md-8">
-                  <input class="form-control" type="text" required="required" name="namae" placeholder="Busqueda">
+                  <input class="form-control col-3" type="text" required="required" name="namae" placeholder="Busqueda">
                 </div>
                 <div class="col-md-8">
                   <label>Parametro de busqueda</label>
@@ -42,9 +43,8 @@ require '../globales.php';
               <div class="form-group">
                 <div class="col-md-8">
                   <p>
-                    <button type="submit" name="submit" style="margin-left: 350px; border-radius: 10px; padding-left: 20px; padding-right: 20px;color: white; background-color: green">
-                      Buscar
-                    </button>
+                  <button type="submit" name="submit" style="margin-left: 350px; border-radius: 10px; padding-left: 20px; padding-right: 20px;color: white; background-color: red"> GO</button>
+
                   </p>
                 </div>
               </div>
@@ -101,7 +101,7 @@ require '../globales.php';
               <div class="form-group">
                 <div class="col-md-8">
                   <p>
-                    <button type="submit" name="submit" style="margin-left: 350px; border-radius: 10px; padding-left: 20px; padding-right: 20px;color: white; background-color: green">
+                    <button type="submit" name="submit" style="margin-left: 350px; border-radius: 10px; padding-left: 20px; padding-right: 20px;color: white; background-color: red">
                       Agregar al carrito
                     </button>
                   </p>
@@ -154,7 +154,7 @@ require '../globales.php';
               <div class="form-group">
                 <div class="col-md-8">
                   <p>
-                    <button type="submit" name="submit" style="margin-left: 350px; border-radius: 10px; padding-left: 20px; padding-right: 20px;color: white; background-color: green">
+                    <button type="submit" name="submit" style="margin-left: 350px; border-radius: 10px; padding-left: 20px; padding-right: 20px;color: white; background-color: red">
                       Concretar venta
                     </button>
                   </p>
@@ -167,7 +167,7 @@ require '../globales.php';
               <div class="form-group">
                 <div class="col-md-8">
                   <p>
-                    <button type="submit" name="submit" style="margin-left: 350px; border-radius: 10px; padding-left: 20px; padding-right: 20px;color: white; background-color: green">
+                    <button type="submit" name="submit" style="margin-left: 350px; border-radius: 10px; padding-left: 20px; padding-right: 20px;color: white; background-color: red">
                       Volver
                     </button>
                   </p>

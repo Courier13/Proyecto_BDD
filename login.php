@@ -12,7 +12,8 @@ $_SESSION["login"] = false;
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 </head>
 
-<body style="background: linear-gradient(#e66465, #9198e5);">
+<body style=" background: rgb(2,0,36);
+background: linear-gradient(356deg, rgba(2,0,36,1) 14%, rgba(9,24,121,1) 35%, rgba(0,212,255,1) 100%); ">
 
   <div class="container">
  

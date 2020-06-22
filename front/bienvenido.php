@@ -16,40 +16,55 @@ $_SESSION["carro"] = array();
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
 
-<body style="background: linear-gradient(#e66465, #9198e5);">
+<body style=" background: rgb(2,0,36);
+background: linear-gradient(356deg, rgba(2,0,36,1) 14%, rgba(9,24,121,1) 35%, rgba(0,212,255,1) 100%); ">
+
   <div class="contenedor">
+    
     <div class="row">
+      
       <div class="col-md-12">
+      <h1 class="text-center"> Bienvenido <?php echo $usr; ?> </h1>
+
         <div class="well well-sm formulario">
           <form class="form-horizontal" method="post" action="busqueda.php">
       
-              <legend class="text-center header"> Bienvenido <?php echo $usr; ?> </legend>
+             
               <div class="form-group">
                   <label class="col-md-8">Busqueda</label>
-                  <button type="submit" name="submit" class="btn btn-outline-secondary"> GO</button>
+                  <button type="submit" name="submit" class="btn btn-outline-danger"> GO</button>
               </div>
           </form>
 
           <form class="form-horizontal " method="post" action="ventas.php">
           
-                  <label class="col-md-8">Ventas</label>
-                  <button type="submit" name="submit" class="btn btn-outline-secondary"> GO</button>
+              <div class="form-group labels">
 
+                  <label class="col-md-8">Ventas</label>
+                  <button type="submit" name="submit" class="btn btn-outline-danger"> GO</button>
+              </div>
           </form>
 
           <form class="form-horizontal" method="post" action="insert.php">
             
-                  <label class="col-md-8">Insertar</label>
-                  <button type="submit" name="submit" class="btn btn-outline-secondary"> GO</button>
+              <div class="form-group labels">
+
+                  <label class="col-md-8 f">Insertar</label>
+                  <button type="submit" name="submit" class="btn btn-outline-danger"> GO</button>
+              </div>
 
           </form>
 
           <form class="form-horizontal" method="post" action="../back/logout.php">
        
+              <div class="form-group labels">
+
                   <label class="col-md-8">Salir</label>
-                  <button type="submit" name="submit" class="btn btn-outline-secondary"> GO</button>
+                  <button type="submit" name="submit" class="btn btn-outline-danger"> GO</button>
+              </div>
 
           </form>
+
         </div>
       </div>
     </div>
