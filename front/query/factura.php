@@ -61,7 +61,7 @@ $resultado = $_SESSION["resultado"];
               </div>
             </fieldset>
           </form>
-          <form class="form-horizontal" method="post" action="../insert.php">
+          <form class="form-horizontal" method="post" action="../busqueda.php">
             <fieldset>
               <div class="form-group">
                 <div class="col-md-8">
