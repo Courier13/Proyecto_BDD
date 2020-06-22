@@ -43,7 +43,7 @@ background: linear-gradient(356deg, rgba(2,0,36,1) 14%, rgba(9,24,121,1) 35%, rg
               <div class="form-group">
                 <div class="col-md-8">
                   <p>
-                  <button type="submit" name="submit" style="margin-left: 350px; border-radius: 10px; padding-left: 20px; padding-right: 20px;color: white; background-color: red"> GO</button>
+                  <button type="submit" name="submit" style="margin-left: 350px; border-radius: 10px; padding-left: 20px; padding-right: 20px;color: white; background-color: red">Search</button>
 
                   </p>
                 </div>
@@ -102,7 +102,7 @@ background: linear-gradient(356deg, rgba(2,0,36,1) 14%, rgba(9,24,121,1) 35%, rg
                 <div class="col-md-8">
                   <p>
                     <button type="submit" name="submit" style="margin-left: 350px; border-radius: 10px; padding-left: 20px; padding-right: 20px;color: white; background-color: red">
-                      Agregar al carrito
+                      Add to cart
                     </button>
                   </p>
                 </div>
@@ -155,7 +155,7 @@ background: linear-gradient(356deg, rgba(2,0,36,1) 14%, rgba(9,24,121,1) 35%, rg
                 <div class="col-md-8">
                   <p>
                     <button type="submit" name="submit" style="margin-left: 350px; border-radius: 10px; padding-left: 20px; padding-right: 20px;color: white; background-color: red">
-                      Concretar venta
+                      Sale contrete
                     </button>
                   </p>
                 </div>
@@ -168,7 +168,7 @@ background: linear-gradient(356deg, rgba(2,0,36,1) 14%, rgba(9,24,121,1) 35%, rg
                 <div class="col-md-8">
                   <p>
                     <button type="submit" name="submit" style="margin-left: 350px; border-radius: 10px; padding-left: 20px; padding-right: 20px;color: white; background-color: red">
-                      Volver
+                      Back
                     </button>
                   </p>
                 </div>

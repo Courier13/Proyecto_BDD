@@ -73,7 +73,7 @@ background: linear-gradient(356deg, rgba(2,0,36,1) 14%, rgba(9,24,121,1) 35%, rg
                 <div class="col-md-8">
                   
                     <button type="submit" name="submit" class="btn btn-outline-danger" >
-                      Volver
+                      Back
                     </button>
                 
                 </div>
