@@ -67,19 +67,20 @@ $cliente2 = new MongoDB\Client("mongodb://${user}:${pwd}@localhost:27017");
 $colección2 = $cliente2->Examen->Venta;
 
 $insert = $colección2->insertOne( $query2 );
-
+echo $param;
 if ($param == "con") {
   $query3 = [$FACTURA_ID => $ID_venta . $targetID, $FACTURA_Fecha => $Fecha, $FACTURA_Cliente => $targetID];
 
   $cliente3 = new MongoDB\Client("mongodb://${user}:${pwd}@localhost:27017");
   $colección3 = $cliente3->Examen->Factura;
 
-  $insert = $colección2->insertOne( $query3 );
+  $insert = $colección3->insertOne( $query3 );
+  echo "we";
 }
 
 $_SESSION["carro"] = array();
-["CarritoFlag"] = false;
+$_SESSION["CarritoFlag"] = false;
 
-header("Location: ../../front/ventas.php");
+//header("Location: ../../front/ventas.php");
 
 ?>
