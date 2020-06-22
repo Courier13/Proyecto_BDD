@@ -20,41 +20,40 @@ $resultado = $_SESSION["resultado"];
     <div class="row">
       <div class="col-md-12">
         <div class="well well-sm">
-          <form class="form-horizontal" method="post" action="../../back/altaEmpleado.php">
+          <form class="form-horizontal" method="post" action="../../back/BuscarFactura.php">
             <fieldset>
-              <legend class="text-center header"> Agregar Factura <br /> Usuario: <?php echo $usr; ?> </legend>
+              <legend class="text-center header"> Busqueda de Factura <br /> Usuario: <?php echo $usr; ?> </legend>
               <div class="form-group">
                 <div class="col-md-8">
-                  <input class="form-control" type="text" required="required" name="id_factura" placeholder="Id Factura">
+                  <input class="form-control" type="text" required="required" name="namae" placeholder="Busqueda">
+                  <label>Parametro de busqueda</label>
+                  <select name="tipo" class="col-12">
+                    <option value="nombre" selected>Id</option>
+                    <option value="apellido_pat">Fecha</option>
+                    <option value="puesto">Id Cliente</option>
+                  </select>
+                  <button type="submit" name="submit" class="btn btn-outline-danger btn-block"> Search</button>
+
                 </div>
               </div>
-              <div class="form-group">
-                <div class="col-md-8">
-                  <input class="form-control" type="text" required="required" name="fecha_factura" placeholder="Fecha Factura">
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="col-md-8">
-                  <input class="form-control" type="text" required="required" name="id_cliente" placeholder="Id Cliente">
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="col-md-8">
-                  <p>
-                    <button type="submit" name="submit" style="margin-left: 350px; border-radius: 10px; padding-left: 20px; padding-right: 20px;color: white; background-color: green">
-                      Insertar
-                    </button>
-                  </p>
-                </div>
               </div>
               <div class="form-group">
                 <div class="col-md-8">
                   <label class="col-md-8">
                     <?php
-                    if ($_SESSION["insercion"]) {
-                      echo "Factura Agregada Correctamente <br />";
-                      echo $resultado;
-                      $_SESSION["insercion"] = false;
+                    if ($_SESSION["busqueda"]) {
+                      echo "Busqueda: <br />";
+                      foreach ($resultado as $entry) {
+                        $_id = $entry[$FACTURA_ID];
+                      	$nombre = $entry[$FACTURA_Fecha];
+                        $fecha = $entry[$FACTURA_Cliente];
+
+                        echo "Id: " . $_id . "<br />" .
+                        " Nombre: " . $nombre . "<br />" .
+                        " Fecha: " . $fecha .  "<br />" .
+                        "<br />";
+                      }
+                      $_SESSION["busqueda"] = false;
                     }
                     ?>
                   </label>

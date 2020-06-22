@@ -42,6 +42,6 @@ $_SESSION["resultado"] = $resultado;
 $_SESSION["busqueda"] = true;
 
 //echo json_encode($resultado);
-header("Location: ../../front/query/.php");
+header("Location: ../../front/query/factura.php");
 
 ?>

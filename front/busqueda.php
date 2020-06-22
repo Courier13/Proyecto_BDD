@@ -18,47 +18,57 @@ $usr = $_SESSION["usuario"];
 background: linear-gradient(356deg, rgba(2,0,36,1) 14%, rgba(9,24,121,1) 35%, rgba(0,212,255,1) 100%); ">
 <legend class="text-center header" style="color: white"> Bienvenido <?php echo $usr; ?> </legend>
 
-  <div class="contenedor">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="well well-sm">
-          <form class="form-horizontal" method="post" action="./query/nombre.php">
-            
-              <div class="form-group">
-                <div class="col-md-8">
-                  <label class="col-md-8">Busqueda de producto</label>
-                  <button type="submit" name="submit" class="btn btn-outline-danger"> GO</button>
+<div class="contenedor">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="well well-sm">
+        <form class="form-horizontal" method="post" action="./query/nombre.php">
 
-                </div>
-              </div>
-          
-          </form>
+          <div class="form-group">
+            <div class="col-md-8">
+              <label class="col-md-8">Busqueda de producto</label>
+              <button type="submit" name="submit" class="btn btn-outline-danger"> GO</button>
 
-          <form class="form-horizontal" method="post" action="./query/lookEmpleado.php">
+            </div>
+          </div>
 
-            <div class="form-group">
-                <div class="col-md-8">
-                  <label class="col-md-8">Busqueda de empleado</label>
-                  <button type="submit" name="submit" class="btn btn-outline-danger"> GO</button>
+        </form>
 
-                </div>
-              </div>
-            </fieldset>
-          </form>
+        <form class="form-horizontal" method="post" action="./query/lookEmpleado.php">
 
-          <form class="form-horizontal boton" method="post" action="bienvenido.php">
-              <div class="form-group boton">
+          <div class="form-group">
+            <div class="col-md-8">
+              <label class="col-md-8">Busqueda de empleado</label>
+              <button type="submit" name="submit" class="btn btn-outline-danger"> GO</button>
 
-                <div class="col-md-8 ">
-                
-                  <button type="submit" name="submit" class="btn btn-outline-danger"> Back</button>
+            </div>
+          </div>
+        </form>
 
-                </div>
-              </div>
-          </form>
-        </div>
+        <form class="form-horizontal" method="post" action="./query/factura.php">
+
+          <div class="form-group">
+            <div class="col-md-8">
+              <label class="col-md-8">Busqueda de Factura</label>
+              <button type="submit" name="submit" class="btn btn-outline-danger"> GO</button>
+
+            </div>
+          </div>
+        </form>
+
+        <form class="form-horizontal boton" method="post" action="bienvenido.php">
+          <div class="form-group boton">
+
+            <div class="col-md-8 ">
+
+              <button type="submit" name="submit" class="btn btn-outline-danger"> Back</button>
+
+            </div>
+          </div>
+        </form>
       </div>
     </div>
   </div>
+</div>
 </body>
 </html>
