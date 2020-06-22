@@ -79,7 +79,6 @@ background: linear-gradient(356deg, rgba(2,0,36,1) 14%, rgba(9,24,121,1) 35%, rg
                 <div class="col-md-8">
                   <p>
                   <button type="submit" name="submit" class="btn btn-outline-danger btn-block">Insert</button>
-                  <button type="submit" name="submit" class="btn btn-outline-danger btn-block">Back</button>
 
                   </p>
                 </div>
@@ -104,6 +103,7 @@ background: linear-gradient(356deg, rgba(2,0,36,1) 14%, rgba(9,24,121,1) 35%, rg
               <div class="form-group">
                 <div class="col-md-8">
                   <p>
+                  <button type="submit" name="submit" class="btn btn-outline-danger btn-block">Back</button>
 
                   </p>
                 </div>
