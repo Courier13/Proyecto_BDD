@@ -25,16 +25,16 @@ background: linear-gradient(356deg, rgba(2,0,36,1) 14%, rgba(9,24,121,1) 35%, rg
 
         <div class="well well-sm formulario">
           <form class="form-horizontal" method="post" action="./query/insrtProd.php">
-          
+
               <div class="form-group">
                 <div class="col-md-8">
-                  <label class="col-md-8">Insertar producto</label> 
+                  <label class="col-md-8">Insertar producto</label>
                   <button type="submit" name="submit" class="btn btn-outline-danger"> GO</button>
 
                 </div>
               </div>
-          
-        
+
+
           </form>
 
           <form class="form-horizontal" method="post" action="./query/update.php">
@@ -45,7 +45,7 @@ background: linear-gradient(356deg, rgba(2,0,36,1) 14%, rgba(9,24,121,1) 35%, rg
 
                 </div>
               </div>
-          
+
           </form>
           <form class="form-horizontal" method="post" action="./query/insertEmpl.php">
               <div class="form-group">
@@ -55,7 +55,7 @@ background: linear-gradient(356deg, rgba(2,0,36,1) 14%, rgba(9,24,121,1) 35%, rg
 
                 </div>
               </div>
-             
+
           </form>
           <form class="form-horizontal" method="post" action="./query/updatetEmpl.php">
               <div class="form-group">
@@ -65,20 +65,32 @@ background: linear-gradient(356deg, rgba(2,0,36,1) 14%, rgba(9,24,121,1) 35%, rg
 
                 </div>
               </div>
-        
+
           </form>
-          <form class="form-horizontal" method="post" action="bienvenido.php">
-            
+
+          <form class="form-horizontal" method="post" action="./query/insertCliente.php">
               <div class="form-group">
                 <div class="col-md-8">
-                  
+                  <label class="col-md-8">Insertar cliente</label>
+                  <button type="submit" name="submit" class="btn btn-outline-danger"> GO</button>
+
+                </div>
+              </div>
+
+          </form>
+
+          <form class="form-horizontal" method="post" action="bienvenido.php">
+
+              <div class="form-group">
+                <div class="col-md-8">
+
                     <button type="submit" name="submit" class="btn btn-outline-danger" >
                       Back
                     </button>
-                
+
                 </div>
               </div>
-            
+
           </form>
         </div>
       </div>

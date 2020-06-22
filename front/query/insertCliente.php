@@ -20,7 +20,7 @@ $resultado = $_SESSION["resultado"];
     <div class="row">
       <div class="col-md-12">
         <div class="well well-sm">
-          <form class="form-horizontal" method="post" action="../../back/altaEmpleado.php">
+          <form class="form-horizontal" method="post" action="../../back/altaCliente.php">
             <fieldset>
               <legend class="text-center header"> Agregar empleado <br /> Usuario: <?php echo $usr; ?> </legend>
               <div class="form-group">
