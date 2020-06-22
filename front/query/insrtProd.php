@@ -34,6 +34,8 @@ background: linear-gradient(356deg, rgba(2,0,36,1) 14%, rgba(9,24,121,1) 35%, rg
                   <input class="form-control" type="text" required="required" name="namae" placeholder="Nombre">
                 </div>
               </div>
+
+            </fieldset>
               <label>Insertar cada auto separado por una coma y un espacio</label>
               <div class="form-group">
                 <div class="col-md-8">
