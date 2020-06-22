@@ -28,11 +28,10 @@ switch ($_POST['tipo']) {
 
 $cliente = new MongoDB\Client("mongodb://${user}:${pwd}@localhost:27017");
 $colección = $cliente->Examen->Empleado;
-$aux = $cliente->Examen->Domicilio;
 
 $query = [$param => $target];
 $busqueda = $colección->find( $query );
-$busquedaAUX = $aux->find( );
+
 
 $resultado = array();
 
@@ -44,16 +43,20 @@ foreach ($busqueda as $entry) {
   $temp[$EMPLEADO_Materno] = $entry[$EMPLEADO_Materno];
   $temp[$EMPLEADO_Tel] = $entry[$EMPLEADO_Tel];
   $temp[$EMPLEADO_Domicilio] = $entry[$EMPLEADO_Domicilio];
-  /*
+  
+  $cliente2 = new MongoDB\Client("mongodb://${user}:${pwd}@localhost:27017");
+  $aux = $cliente2->Examen->Domicilio;
   $VIP = $entry[$EMPLEADO_Domicilio];
+  $query2 = [$DOMICILIO_ID => $VIP];
+  $busquedaAUX = $aux->find( $query2 );
   foreach ($busquedaAUX as $test1) {
-    if ($test1[$DOMICILIO_ID] == $VIP) {
-      $temp[$DOMICILIO_Calle] = $test1[$DOMICILIO_Calle];
-      $temp[$DOMICILIO_Numero] = $test1[$DOMICILIO_Numero];
-      $temp[$DOMICILIO_Colonia] = $test1[$DOMICILIO_Colonia];
-      $temp[$DOMICILIO_CP] = $test1[$DOMICILIO_CP];
-    }
-  }// */
+
+    $temp[$DOMICILIO_Calle] = $test1[$DOMICILIO_Calle];
+    $temp[$DOMICILIO_Numero] = $test1[$DOMICILIO_Numero];
+    $temp[$DOMICILIO_Colonia] = $test1[$DOMICILIO_Colonia];
+    $temp[$DOMICILIO_CP] = $test1[$DOMICILIO_CP];
+
+  }
 
   $temp[$EMPLEADO_Correo] = $entry[$EMPLEADO_Correo];
   $temp[$EMPLEADO_Puesto] = $entry[$EMPLEADO_Puesto];
