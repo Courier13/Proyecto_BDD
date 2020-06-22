@@ -10,13 +10,14 @@ $resultado = $_SESSION["resultado"];
 <html>
 <head>
   <title>Examen BDD</title>
-  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/insertEmp.css">
   <link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
 
-<body>
-  <div class="container">
+<body style=" background: rgb(2,0,36);
+background: linear-gradient(356deg, rgba(2,0,36,1) 14%, rgba(9,24,121,1) 35%, rgba(0,212,255,1) 100%); " >
+  <div class="contenedor">
     <div class="row">
       <div class="col-md-12">
         <div class="well well-sm">
@@ -106,9 +107,8 @@ $resultado = $_SESSION["resultado"];
               <div class="form-group">
                 <div class="col-md-8">
                   <p>
-                    <button type="submit" name="submit" style="margin-left: 350px; border-radius: 10px; padding-left: 20px; padding-right: 20px;color: white; background-color: green">
-                      Insertar
-                    </button>
+                  <button type="submit" name="submit" class="btn btn-outline-danger btn-block">Insert</button>
+
                   </p>
                 </div>
               </div>
@@ -132,9 +132,8 @@ $resultado = $_SESSION["resultado"];
               <div class="form-group">
                 <div class="col-md-8">
                   <p>
-                    <button type="submit" name="submit" style="margin-left: 350px; border-radius: 10px; padding-left: 20px; padding-right: 20px;color: white; background-color: green">
-                      Volver
-                    </button>
+                  <button type="submit" name="submit" class="btn btn-outline-danger btn-block">Back</button>
+
                   </p>
                 </div>
               </div>

@@ -16,7 +16,7 @@ $resultado = $_SESSION["resultado"];
 </head>
 
 <body>
-  <div class="container">
+  <div class="contenedor">
     <div class="row">
       <div class="col-md-12">
         <div class="well well-sm">
@@ -57,9 +57,8 @@ $resultado = $_SESSION["resultado"];
               <div class="form-group">
                 <div class="col-md-8">
                   <p>
-                    <button type="submit" name="submit" style="margin-left: 350px; border-radius: 10px; padding-left: 20px; padding-right: 20px;color: white; background-color: green">
-                      Actualizar
-                    </button>
+                  <button type="submit" name="submit" class="btn btn-outline-danger btn-block">update</button>
+
                   </p>
                 </div>
               </div>
@@ -84,9 +83,8 @@ $resultado = $_SESSION["resultado"];
               <div class="form-group">
                 <div class="col-md-8">
                   <p>
-                    <button type="submit" name="submit" style="margin-left: 350px; border-radius: 10px; padding-left: 20px; padding-right: 20px;color: white; background-color: green">
-                      Volver
-                    </button>
+                  <button type="submit" name="submit" class="btn btn-outline-danger btn-block">Back</button>
+
                   </p>
                 </div>
               </div>
