@@ -58,12 +58,6 @@ $resultado = $_SESSION["resultado"];
                   <input class="form-control" type="text" required="required" name="correo" placeholder="Correo">
                 </div>
               </div>
-
-              <div class="form-group">
-                <div class="col-md-8">
-                  <input class="form-control" type="text" required="required" name="correo" placeholder="Correo">
-                </div>
-              </div>
               <div class="form-group">
                 <div class="col-md-8">
                   <p>
