@@ -81,6 +81,6 @@ if ($param == "con") {
 $_SESSION["carro"] = array();
 $_SESSION["CarritoFlag"] = false;
 
-//header("Location: ../../front/ventas.php");
+header("Location: ../../front/ventas.php");
 
 ?>
